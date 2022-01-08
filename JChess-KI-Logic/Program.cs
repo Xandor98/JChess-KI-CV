@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using JChess_KI_Logic.Helper;
+using JChess_KI_Logic.Logic;
 
-namespace JChess_KI_Logic
+namespace JChess_KI_Logic 
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Player player = new Player(Config.Instance.GetConfig("PLAYER_NAME"));
+
+            player.Start();
         }
     }
 }
